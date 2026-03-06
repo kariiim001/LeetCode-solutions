@@ -1,17 +1,21 @@
-let profit =function(prices){
-    let min_price = prices[0]
-    let max_profit =0
+let maxProfit = function(prices){
 
-    for (let i =0; i< prices.length; i++){
+    let min_price = prices[0];
+    let max_profit = 0;
 
-        let profit = prices[i]-min_price
+    for (let i = 0; i < prices.length; i++){
 
-        if (profit > max_profit ){
-            max_profit = profit
+        let profit = prices[i] - min_price;
+
+        if (profit > max_profit){
+            max_profit = profit;
         }
+
         if (prices[i] < min_price){
-            min_price=prices[i]
+            min_price = prices[i];
         }
 
-    }return max_profit
-}
+    }
+
+    return max_profit;
+};
